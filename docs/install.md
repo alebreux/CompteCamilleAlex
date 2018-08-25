@@ -11,3 +11,7 @@ Ajouter le ficher de config pour firebase
 
 Ajouter les modules pour utiliser AngularFire (src/app/app.module.ts)
 
+```shell
+# change le style par défaut de l'application
+ng config schematics.@schematics/angular:component '{ styleext: "scss"}'
+```
