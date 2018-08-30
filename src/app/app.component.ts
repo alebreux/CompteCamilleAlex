@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {AngularFirestore} from 'angularfire2/firestore';
+import {log} from 'util';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'compteCamilleAlex';
+  constructor (
+    private db: AngularFirestore
+  ){
+    const refToDemo = db.collection('demo')
+    // refToDemo.add(( test: 'salut'));
+    refToDemo.valueChanges().subscribe(value => console.log(value));
+    console.log(db);
+  }
 }
