@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {AngularFireModule} from 'angularfire2';
-import {configFirebase} from '../environments/prod.firebase.config';
+import { configFirebase} from '../environments/prod.firebase.config';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
