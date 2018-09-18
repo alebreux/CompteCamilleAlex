@@ -1,0 +1,54 @@
+$box-shadow: 1px 1px 2px 0px #656565;
+h1{
+  text-align: center;
+}
+
+.recap{
+  width: 100%;
+  margin: 20px 0px ;
+  border-radius: 10px;
+  background-color: #d7d7d7;
+  padding: 10px;
+  box-shadow: $box-shadow;
+  h2{
+    text-align: center;
+    margin: 5px;
+  }
+}
+.indiv{
+  display: flex;
+  justify-content: space-around;
+}
+.montant{
+  min-width: 40%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 25%;
+  div{
+    text-align: center;
+  }
+  &.Alex{
+    background-color: #20b024;
+    box-shadow: $box-shadow;
+  }
+  &.Camille{
+    background-color: #8891f1;
+    box-shadow: 1px 1px 2px 0px #656565;
+  }
+}
+.controls{
+  display: flex;
+  margin: 20px -10px;
+
+  button{
+    flex-grow: 1;
+    margin: 0px 10px;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    box-shadow: $box-shadow;
+
+  }
+
+}
