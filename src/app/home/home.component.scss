@@ -5,9 +5,9 @@ h1{
 
 .recap{
   width: 100%;
-  margin: 20px 0px ;
-  border-radius: 10px;
-  background-color: #d7d7d7;
+  margin: 20px 6px ;
+  border-radius: 30px;
+  background-color: rgba(0, 114, 77, 0.3);
   padding: 10px;
   box-shadow: $box-shadow;
   h2{
@@ -23,16 +23,16 @@ h1{
   min-width: 40%;
   margin: 5px;
   padding: 10px;
-  border-radius: 25%;
+  border-radius: 100px;
   div{
     text-align: center;
   }
   &.Alex{
-    background-color: #20b024;
+    background-color: rgba(0, 120, 41 ,0.7);
     box-shadow: $box-shadow;
   }
   &.Camille{
-    background-color: #8891f1;
+    background-color: rgba(21, 127, 255,0.9);
     box-shadow: 1px 1px 2px 0px #656565;
   }
 }
@@ -45,10 +45,10 @@ h1{
     margin: 0px 10px;
     border: none;
     padding: 15px 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     font-size: 1.1em;
     box-shadow: $box-shadow;
-
+    color: black;
+    background-color: rgba(90, 0, 32, 0.7);
   }
-
 }
