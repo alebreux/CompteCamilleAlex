@@ -1,3 +1,38 @@
-
 <button routerLink="/home">Accueil</button>
 
+<form [formGroup]="form" novalidate (ngSubmit)="validate()">
+  <div>
+    <label for="montant">Montant</label>
+    <input id="montant" formControlName="montant" type="number">
+  </div>
+
+  <div>
+    <label for="date">Date</label>
+    <input id="date" formControlName="date" type="date">
+  </div>
+
+  <div>
+    <label for="desc">Description</label>
+    <textarea name="" id="desc" formControlName="desc" cols="30" rows="2"></textarea>
+  </div>
+
+  <div>
+    <div class="radioTitle">Payé par</div>
+    <input id="payéParCamille" formControlName="payePar" name="payePar" type="radio" value="camille">
+    <label for="payéParCamille">Camille</label>
+    <input id="payéParAlex" formControlName="payePar" name="payePar" type="radio" value="alex">
+    <label for="payéParAlex">Alex</label>
+  </div>
+
+  <div>
+    <div class="radioTitle">Pour</div>
+    <input id="pourCamille" formControlName="pour" name="pour" type="radio" value="camille">
+    <label for="pourCamille">Pour Camille</label>
+    <input id="pourAlex" formControlName="pour" name="pour" type="radio" value="alex">
+    <label for="pourAlex">Pour Alex</label>
+    <input id="pourNous" formControlName="pour" name="pour" type="radio" value="les2">
+    <label for="pourNous">Pour 2</label>
+  </div>
+
+  <button type="submit" [disabled]="!form.valid">valider</button>
+</form>

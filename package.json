@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
+    "start": "ng serve -o --host 0.0.0.0",
     "build": "ng build --prod",
     "predeploy": "npm run build",
     "deploy": "firebase deploy",
@@ -26,6 +26,7 @@
     "core-js": "^2.5.4",
     "firebase": "^5.4.1",
     "font-awesome": "^4.7.0",
+    "moment": "^2.22.2",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

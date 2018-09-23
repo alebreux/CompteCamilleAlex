@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HistoryComponent } from './history/history.component';
 import { AddComponent } from './add/add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AddComponent } from './add/add.component';
     BrowserModule,
     AngularFireModule.initializeApp(configFirebase),
     AngularFirestoreModule,
+    ReactiveFormsModule,
 
     AppRoutingModule,
   ],
