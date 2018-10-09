@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
+import { EntreeService } from '../entree.service';
 
 @Component({
   selector: 'app-add',
@@ -10,9 +11,10 @@ import * as moment from 'moment';
 export class AddComponent implements OnInit {
 
   form: FormGroup;
-
+  running = false;
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private entreeService: EntreeService,
   ) { }
 
   ngOnInit() {
@@ -23,11 +25,22 @@ export class AddComponent implements OnInit {
       payePar: ['', Validators.required],
       pour: ['', Validators.required],
     });
-    this.form.valueChanges.subscribe(value => console.log(this.form.valid, value));
   }
 
   validate(): void {
-    console.log(this.form.value);
-}
+    const entree = {...this.form.value};
+    entree.date = moment(entree.date, 'YYYY-MM-DD').toDate();
+    this.running=true;
+    this.entreeService.addEntry$(this.form.value).subscribe(() => {
+        this.running = false;
+        this.form.patchValue({
+          montant: '',
+          date: moment().format('YYYY-MM-DD'),
+          desc: '',
+          payePar: '',
+          pour: '',
+        })
+      } );
+  }
 
 }

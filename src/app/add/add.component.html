@@ -47,5 +47,8 @@
     </div>
   </div>
 
-  <button type="submit" [disabled]="!form.valid">valider</button>
+  <button type="submit" [disabled]="!form.valid || running">
+    <i *ngIf="running" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+    valider
+  </button>
 </form>

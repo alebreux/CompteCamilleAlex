@@ -20,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(configFirebase),
+    AngularFireModule.initializeApp(configFirebase.firebase),
     AngularFirestoreModule,
     ReactiveFormsModule,
 
