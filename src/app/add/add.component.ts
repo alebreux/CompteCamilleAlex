@@ -30,7 +30,7 @@ export class AddComponent implements OnInit {
   validate(): void {
     const entree = {...this.form.value};
     entree.date = moment(entree.date, 'YYYY-MM-DD').toDate();
-    this.running=true;
+    this.running = true;
     this.entreeService.addEntry$(this.form.value).subscribe(() => {
         this.running = false;
         this.form.patchValue({
@@ -39,7 +39,7 @@ export class AddComponent implements OnInit {
           desc: '',
           payePar: '',
           pour: '',
-        })
+        });
       } );
   }
 
